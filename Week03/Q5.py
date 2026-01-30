@@ -18,3 +18,12 @@ print(f"Contacts after deleting Charlie: {contacts}")
 print(f"All names {contacts.keys()}")
 print(f"All numbers {contacts.values()}")
 print(f"Total contacts {len(contacts)}")
+
+# Notes:
+# Dictionaries are represented by curly brackets "{}" and key value pairs
+# To add/update a key you can do this: arrayName["keyName"] = value
+# To delete a key use: del keyword
+#   Ex: del arrayname["keyName"]
+# .keys() => returns all keys from a dictionary
+# .values() => return all values from a dictionary
+# len() => returns the length of a dictionary 
