@@ -13,7 +13,7 @@ print(f"Total number of grade: {len(grades)}")
 
 # Notes:
 # .append(value) => Adds items to the last index
-# .sort() => Sorts items in from desc to asc
+# .sort() => Sorts items from desc to asc
 # array[-1] => Index of last item
 # array[0] => Index of first item
 # len(array) => Length of array
