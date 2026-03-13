@@ -35,9 +35,8 @@ def fizzbuzz(n):
     if n % 5 == 0:  return "Buzz"
     return str(n)
 
-# self is the same as this.Name in java
 
-# Complete TestCelsius
+# TODO: Complete TestCelsius
 #   test_freezing  → celsius_to_fahrenheit(0)   == 32.0
 #   test_boiling   → celsius_to_fahrenheit(100) == 212.0
 #   test_negative  → celsius_to_fahrenheit(-40) == -40.0
@@ -48,10 +47,9 @@ class TestCelsius(unittest.TestCase):
         self.assertEqual(celsius_to_fahrenheit(100), 212.0)
     def test_negative(self):
         self.assertEqual(celsius_to_fahrenheit(-40), -40.0)
-    
 
 
-# Complete TestValidIP
+# TODO: Complete TestValidIP
 #   test_valid         → is_valid_ip("192.168.1.1") is True
 #   test_invalid_octet → is_valid_ip("256.1.1.1")   is False
 #   test_too_few_parts → is_valid_ip("1.2.3")       is False
@@ -59,7 +57,7 @@ class TestCelsius(unittest.TestCase):
 class TestValidIP(unittest.TestCase):
     def test_valid(self):
         self.assertTrue(is_valid_ip("192.168.1.1"))
-    def test_invalid_octet(self):
+    def test_invalid_object(self):
         self.assertFalse(is_valid_ip("256.1.1.1"))
     def test_too_few_parts(self):
         self.assertFalse(is_valid_ip("1.2.3"))
@@ -67,7 +65,7 @@ class TestValidIP(unittest.TestCase):
         self.assertFalse(is_valid_ip(""))
 
 
-# Complete TestFizzBuzz
+# TODO: Complete TestFizzBuzz
 #   test_fizz     → fizzbuzz(3)  == "Fizz"
 #   test_buzz     → fizzbuzz(5)  == "Buzz"
 #   test_fizzbuzz → fizzbuzz(15) == "FizzBuzz"

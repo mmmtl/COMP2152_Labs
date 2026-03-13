@@ -1,6 +1,6 @@
 # ============================================================
 #  WEEK 09 LAB — Q2: SEQUENTIAL vs THREADED EXECUTION
-#  COMP2152 — Maria Tai
+#  COMP2152 — [Your Name Here]
 # ============================================================
 
 import time
@@ -31,12 +31,12 @@ def simulate_task(name, duration, lock):
 def run_threaded(tasks, lock):
     threads = []
     for name, duration in tasks:
-        t = threading.Thread(target=simulate_task, args=(name, duration, lock)) # threading function, attach a function and its args
-        threads.append(t)
-        for t in threads:
-            t.start()
-        for t in threads:
-            t.join()
+        t = threading.Thread(target=simulate_task, args=(name, duration, lock)) # creates a thread using the function and its args
+        threads.append(t) # add each thread to threads list
+    for t in threads:
+        t.start() # start each thread
+    for t in threads:
+        t.join() # join all started threads
 
 
 # --- Provided below — error handling example from Week 06 ---

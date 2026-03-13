@@ -3,7 +3,7 @@
 #  COMP2152 — Maria Tai
 # ============================================================
 
-# Built-in packages in Python
+# Built-in packages from installing Python in the system
 import os
 import sys
 import platform
@@ -28,40 +28,40 @@ def safe_run(label, func, *args):
         return {}
 
 
-# Complete get_system_info()
+# TODO: Complete get_system_info()
 #   Return a dict with keys: "os", "node", "release", "machine"
 #   Use: platform.system(), platform.node(),
 #        platform.release(), platform.machine()
 def get_system_info():
-    return {
-        "os" : platform.system(), # operating system
-        "node" : platform.node(), # Name of machine/hostname
-        "release" : platform.release(), # Time of relesease
-        "machine" : platform.machine(), # CPU architecture, can demonstrate what sets of instructions the CPU uses
-        }
+    return{
+        "os" : platform.system(), # return operating system
+        "node" : platform.node(), # return system name/hostname
+        "release" : platform.release(), # return release version
+        "machine" : platform.machine() # return CPU
+    }
 
 
-# Complete get_python_info()
+# TODO: Complete get_python_info()
 #   Return a dict with keys: "version", "executable", "platform"
 #   Use: sys.version, sys.executable, sys.platform
 def get_python_info():
     return {
-        "version" : sys.version, # Version of Python
-        "executable" : sys.executable,
-        "platform" : sys.platform,
-        }
+        "version" : sys.version, # return python version
+        "executable" : sys.executable, # return path to execute
+        "platform" : sys.platform # return OS in which Python interpreter operates
+    }
 
 
-# Complete get_directory_info(path)
+# TODO: Complete get_directory_info(path)
 #   Return a dict with keys: "path", "exists", "file_count", "is_directory"
 #   Use: os.path.abspath(), os.path.exists(),
 #        os.listdir() (count items), os.path.isdir()
 def get_directory_info(path):
     return {
-        "path" : os.path.abspath(path),
-        "exists" : os.path.exists(path),
-        "file_count" : len(os.listdir(path)) if os.path.exists(path) else 0,
-        "is_directory" : os.path.isdir(path),
+        "path" : os.path.abspath(path), # the absolute path of dir
+        "exists" : os.path.exists(path), # does it exist?
+        "file_count" : len(os.listdir(path)), # how many files are there?
+        "is_directory" : os.path.isdir(path) # is it a dir or a file?
     }
 
 
