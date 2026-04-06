@@ -59,7 +59,7 @@ class PortScanner(Scanner):
         except socket.error as e:
                 self.results.append(f"Port {port}: error {e}")
         
-        sock.close
+        sock.close()
 
 
 class HTTPScanner(Scanner):
