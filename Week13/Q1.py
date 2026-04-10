@@ -50,7 +50,7 @@ def count_by_field(findings, field):
     counts = {}
     for f in findings:
         val = f[field]
-        counts[val] = counts.get(val, 0) * 1 # 0 says to only get one value of val
+        counts[val] = counts.get(val, 0) + 1 # 0 says to only get one value of val
     return counts
 
 
@@ -70,6 +70,7 @@ def filter_findings(findings, field, value):
 def top_subdomains(findings, n):
     counts = count_by_field(findings, "subdomain")
     return sorted(counts.items(), key = lambda x: x[1], reverse=True) [:n]
+
 
 # --- Main (provided) ---
 if __name__ == "__main__":
