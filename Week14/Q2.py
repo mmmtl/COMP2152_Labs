@@ -58,7 +58,7 @@ def generate_report(url, results):
             print(f"  ✓ {r['header']}: {r['value']}")
         else:
             print(f"  ✗ {r['header']}: MISSING — {REQUIRED_HEADERS[r['header']]}")
-        missing_count += 1
+            missing_count += 1
     
     print(f"  Missing {missing_count} of {len(results)} security headers!")
 
